@@ -154,10 +154,6 @@ RUN set -xe && \
     # Install composer parallel install plugin
     su-exec www-data composer global require hirak/prestissimo:^0.3 && \
 
-    # Install PHPUnit
-    wget -qO- https://phar.phpunit.de/phpunit.phar > /usr/local/bin/phpunit && \
-    chmod +x /usr/local/bin/phpunit && \
-
     # Install Walter tool
     wget -qO- https://github.com/walter-cd/walter/releases/download/v${WALTER_VER}/walter_${WALTER_VER}_linux_amd64.tar.gz \
         | tar xz -C /tmp/ && \
