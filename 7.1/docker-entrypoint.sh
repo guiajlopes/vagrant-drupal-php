@@ -46,7 +46,6 @@ execTpl "xdebug.ini.tpl" "${PHP_INI_DIR}/conf.d/docker-php-ext-xdebug.ini"
 execTpl "php-fpm.conf.tpl" "/usr/local/etc/php-fpm.conf"
 
 addPrivateKey
-fixPermissions
 execInitScripts
 
 if [[ $1 == "make" ]]; then
